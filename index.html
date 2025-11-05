@@ -438,11 +438,16 @@ public class A {
     <pre>
 @RestController
 @RequestMapping("/a")
-public class A {
+public class A
+{
     ...
     @GetMapping
     ...
     @PostMapping 
+    ...
+    @PutMapping
+    ...
+    @DeleteMapping 
     ...
 }
     </pre>
@@ -458,7 +463,8 @@ public class A {
     </ul>
     <p><strong>Example:</strong></p>
     <pre>
-public A fun(@RequestBody A a) {
+public A fun(@RequestBody A a) 
+{
     ...
 }
     </pre>
@@ -476,7 +482,8 @@ return ResponseEntity.ok(a);
         <li><strong>@PathVariable:</strong></li>
             <pre>
 @GetMapping
-public A fun(@PathVariable data-type data) { 
+public A fun(@PathVariable data-type data) 
+{ 
     ... 
 }
     </pre>
@@ -495,5 +502,6 @@ public A fun(@RequestParam data-type data) {
 
 </body>
 </html>
+
 
 
