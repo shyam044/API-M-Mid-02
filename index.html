@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API&M Mid-02 - Questions</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            page-break-after: always;
+        }
+
+        /* Headings */
+        h2 {
+            color: #0077cc;
+            margin: 2rem 0 1rem;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 0.8rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        /* Paragraphs */
+        p {
+            margin: 0.5rem 0;
+        }
+
+        /* Lists */
+        ul {
+            margin: 0.3rem 0 1rem 1rem;
+            padding-left: 1rem;
+        }
+
+        li>ul {
+            margin-top: 0.3rem;
+            margin-bottom: 0.6rem;
+            padding-left: 1rem;
+        }
+
+        li>ul>li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Code block styling */
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 0.95rem;
+            }
+
+            header {
+                font-size: 1.3rem;
+                padding: 0.8rem 0.5rem;
+            }
+
+            .container {
+                padding: 0.9rem;
+                margin: 1.5rem auto;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+                margin-top: 0.7rem;
+            }
+
+            ul {
+                margin-left: 0.5rem;
+                padding-left: 0.7rem;
+            }
+
+            li>ul {
+                margin-top: 0.2rem;
+                margin-bottom: 0.4rem;
+                padding-left: 0.7rem;
+            }
+
+            li>ul>li {
+                margin-bottom: 0.3rem;
+            }
+
+            ul li {
+                font-size: 0.95rem;
+                line-height: 1.3rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .container {
+                page-break-after: always;
+            }
+        }
+
+        .subheading {
+            margin-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .subheading {
+                margin-left: 1rem;
+            }
+        }
+
+        .subsection {
+            margin-left: 1.5rem;
+        }
+
+        .subsection h4 {
+            margin-left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .subsection {
+                margin-left: 1rem;
+            }
+        }
+      /* --- Indentation fix for subsections (mobile + desktop friendly) --- */
+
+/* Indent subsection headings */
+.container h3 {
+    margin-left: 1.5rem;
+}
+
+/* Indent lists, "Example:" text, and code blocks that belong to subsections */
+.container h3 + ul,
+.container h3 + p,
+.container h3 + p + pre,
+.container h3 + ul + p,
+.container h3 + ul + p + pre {
+    margin-left: 2rem;
+}
+
+/* Also indent any nested ULs under these */
+.container h3 + ul ul {
+    margin-left: 2rem;
+}
+
+/* Make indentation smaller on mobile screens */
+@media (max-width: 420px) {
+    .container h3 {
+        margin-left: 1rem;
+        font-size: 1.15rem;
+    }
+    .container h3 + ul,
+    .container h3 + p,
+    .container h3 + p + pre,
+    .container h3 + ul + p,
+    .container h3 + ul + p + pre,
+    .container h3 + ul ul {
+        margin-left: 1.2rem;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        API&M Mid-02
+    </header>
+
+    <div class="container">
+        <h2>1) Explain the Update Operation in Spring Data JPA.</h2>
+
+        <ul>
+            <li><strong>Update Operation in Spring Data JPA:</strong>
+                <ul>
+                    <li>The Update Operation in Spring Data JPA modifies an existing record in the database.</li>
+                    <li>There are two ways to perform update operations:</li>
+                    <ul>
+                        <li><strong>Using save() Method</strong></li>
+                        <li><strong>Using @Modifying and @Query</strong></li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>i) Using save() Method:</h3>
+        <ul>
+            <li>The <strong>save()</strong> method is used to update an existing record in the database.</li>
+            <li>When you call the <strong>save()</strong> method, JPA automatically performs an update instead of an insert.</li>
+            <li>In <strong>JpaRepository</strong>, the <strong>save()</strong> method is used for both inserting and updating records.</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <pre>
+A.save(a);
+        </pre>
+
+        <h3>ii) Using @Modifying and @Query:</h3>
+        <ul>
+            <li>The <strong>@Query</strong> annotation is used to update a specific record instead of the whole record.</li>
+            <li>The <strong>@Modifying</strong> annotation is used to update the records instead of reading them. </li>
+            <li>The <strong>@Transactional</strong> annotation  is used to run the queries safely inside a transaction.</li>
+            <li>We use <strong>JPQL (Java Persistence Query Language)</strong> to execute these queries.</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <pre>
+@Modifying
+@Transactional
+@Query("statement") 
+        </pre>
+    </div>
+    
+    <header>
+        API&M Mid-02
+    </header>
+    <div class="container">
+    <h2>2) Explain Custom Repository Implementation.</h2>
+
+    <ul>
+        <li>If built-in repositories aren’t enough for your Application, you can create a custom repository to handle your specific needs.</li>
+        <li>Custom repository adds extra features to your Applications.</li>
+    </ul>
+
+    <h3>Steps to Create a Custom Repository:</h3>
+
+    <h3>i) Create Interface:</h3>
+    <ul>
+        <li>Create a custom Interface to define the custom repository methods.</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre>
+public interface A {
+    void function();
+}
+    </pre>
+
+    <h3>ii) Implement Interface:</h3>
+    <ul>
+        <li>Implement the custom Interface and write the actual logic by using EntityManager.</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre>
+public class B implements A {
+    private EntityManager a;
+
+    @Override
+    Statement
+}
+    </pre>
+
+    <h3>iii) Extends with JpaRepository:</h3>
+    <ul>
+        <li>Extend both the custom Interface and JpaRepository by using the <strong>extends</strong> keyword.</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre>
+public interface A extends JpaRepository {
+    statement
+}
+    </pre>
+</div>
+
+
+</body>
+</html>
