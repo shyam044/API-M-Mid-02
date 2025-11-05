@@ -196,6 +196,22 @@
         margin-left: 1.2rem;
     }
 }
+/* --- Fix for over-indented nested lists (mobile-friendly) --- */
+
+/* Reduce indentation for all nested lists */
+ul ul {
+    margin-left: 0.8rem !important;
+    padding-left: 0.8rem !important;
+}
+
+/* Even less indentation on small screens */
+@media (max-width: 480px) {
+    ul ul {
+        margin-left: 0.5rem !important;
+        padding-left: 0.6rem !important;
+    }
+}
+
 
 
     </style>
@@ -299,6 +315,54 @@ public interface A extends JpaRepository {
     statement
 }
     </pre>
+</div>
+    <header>
+        API&M Mid-02
+    </header>
+    <div class="container">
+    <h2>3) Explain SOA - Service Oriented Architecture in Web Services.</h2>
+
+    <ul>
+        <li>SOA stands for the Service-Oriented Architecture.</li>
+        <li>SOA is a way to build the software by using small parts called as services.</li>
+        <li>Each service does one job and can be used again in other programs.</li>
+        <li>There are mainly two major roles in SOA:
+            <ul>
+                <li>Service Provider</li>
+                <li>Service Consumer</li>
+            </ul>
+        </li>
+    </ul>
+
+    <img src="service role.png" alt="SOA Roles Image" style="max-width:100%;height:auto;border:1px solid #ccc;border-radius:5px;">
+
+    <h3>a) Service Provider:</h3>
+    <ul>
+        <li>Creates and publishes services.</li>
+    </ul>
+
+    <h3>b) Service Consumer:</h3>
+    <ul>
+        <li>Finds and uses services.</li>
+    </ul>
+
+    <h3>Components of SOA:</h3>
+      <img src="Screenshot-248.png" alt="SOA Components Image" style="max-width:100%;height:auto;border:1px solid #ccc;border-radius:5px;">
+
+    <ul>
+        <li>Web Services:</li>
+        <ul>
+            <li>Web Services is a standard way to implement SOA.</li>
+            <li>They allow applications to interact with the web by using XML-based messaging protocols.</li>
+        </ul>
+        <li>Key Technologies:</li>
+        <ul>
+            <li>SOAP</li>
+            <li>WSDL</li>
+            <li>UDDI</li>
+            <li>RESTful services</li>
+        </ul>
+    </ul>
 </div>
 
 
