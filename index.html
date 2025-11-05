@@ -504,10 +504,88 @@ public A fun(@RequestParam data-type data) {
     </ul>
 
 </div>
+<header>
+    API&M Mid-02
+</header>
+<div class="container">
+    <h2>6) Illustrate the creation of Spring REST controller and REST client with an example.</h2>
+
+    <h3>i) Spring REST Controller:</h3>
+    <ul>
+        <li>Spring REST Controller is the main component in a Spring Boot RESTful service.</li>
+        <li>It is defined using the <strong>@RestController</strong> annotation.</li>
+    </ul>
+
+    <h3>Key Annotations:</h3>
+    <ul>
+        <li><strong>@RestController</strong></li>
+        <li><strong>@RequestMapping</strong></li>
+        <li><strong>@GetMapping, @PostMapping, @PutMapping, @DeleteMapping</strong></li>
+        <li><strong>@RequestBody, @PathVariable, @RequestParam</strong></li>
+    </ul>
+
+    <p><strong>Example:</strong></p>
+    <pre>
+@RestController
+@RequestMapping("/a")
+public class A 
+{
+    ...
+    @GetMapping
+    ...
+    @PostMapping 
+    ...
+    @PutMapping
+    ...
+    @DeleteMapping 
+    ...
+} 
+    </pre>
+
+    <ul>
+        <li><strong>@GetMapping</strong> handles GET requests.</li>
+        <li><strong>@PostMapping</strong> handles POST requests.</li>
+        <li><strong>@PutMapping</strong> handles PUT requests.</li>
+        <li><strong>@DeleteMapping</strong> handles DELETE requests.</li>
+    </ul>
+
+    <h3>ii) REST Client:</h3>
+    <ul>
+        <li>A REST client is used to call REST APIs from another service.</li>
+        <li>There are mainly two ways:</li>
+        <ul>
+            <li>RestTemplate</li>
+            <li>WebClient</li>
+        </ul>
+        
+    <h4>a) RestTemplate:</h4>
+    <pre>
+@RestController
+@RequestMapping("/a")
+public class A 
+{
+    ... 
+    @GetMapping("/b")
+    ...
+}
+    </pre>
+
+    <h4>b) WebClient:</h4>
+    <ul>
+        <li>It is an alternative approach to RestTemplate.</li>
+    </ul>
+    <pre>
+WebClient a = WebClient.create("http://localhost:3000");
+String b = a.get()
+           ...
+    </pre>
+    </ul>
+</div>
 
 
 </body>
 </html>
+
 
 
 
