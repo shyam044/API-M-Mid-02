@@ -423,8 +423,77 @@ public class A {
         <li>iv) Access the API</li>
     </ul>
 </div>
+<header>
+    API&M Mid-02
+</header>
+<div class="container">
+    <h2>5) Creating a Spring REST Controller, @RequestBody and ResponseEntity, Parameter Injection</h2>
+
+    <h3>i) Spring REST Controller:</h3>
+    <ul>
+        <li>Spring REST Controller is the main component in a Spring Boot RESTful service.</li>
+        <li>It is defined using the <strong>@RestController</strong> annotation.</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre>
+@RestController
+@RequestMapping("/a")
+public class A {
+    ...
+    @GetMapping
+    ...
+    @PostMapping 
+    ...
+}
+    </pre>
+    <ul>
+        <li><strong>@GetMapping</strong> handles GET requests.</li>
+        <li><strong>@PostMapping</strong> handles POST requests.</li>
+    </ul>
+
+    <h3>ii) @RequestBody and ResponseEntity:</h3>
+
+    <ul>
+        <li><strong>@RequestBody:</strong> annotation converts the request body into a Java object.</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre>
+public A fun(@RequestBody A a) {
+    ...
+}
+    </pre>
+
+    <ul>
+        <li><strong>ResponseEntity:</strong> used to return the complete HTTP response including headers, body, and status code.</li>
+    </ul>
+    <pre style="margin-left:2rem;">
+return ResponseEntity.ok(a);
+    </pre>
+
+    <h3>iii) Parameter Injection:</h3>
+    <ul>
+        <li>Parameter injection means getting data from a request and injecting it into controller methods.</li>
+        <li><strong>@PathVariable:</strong></li>
+            <pre>
+@GetMapping
+public A fun(@PathVariable data-type data) { 
+    ... 
+}
+    </pre>
+            <li><strong>@RequestParam:</strong></li>
+
+    <pre >
+@GetMapping
+public A fun(@RequestParam data-type data) { 
+    ... 
+}
+    </pre>
+    </ul>
+
+</div>
 
 
 </body>
 </html>
+
 
