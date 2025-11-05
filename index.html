@@ -364,7 +364,67 @@ public interface A extends JpaRepository {
         </ul>
     </ul>
 </div>
+<header>
+    API&M Mid-02
+</header>
+<div class="container">
+    <h2>4) Explain Types of Web Services, RESTful web services and their creation.</h2>
+
+    <ul>
+        <li><strong>Web Services:</strong>
+            <ul>
+                <li>Web Services is a Standard way to implement SOA.</li>
+                <li>They allow Applications to interact with the web by using XML-based messaging protocols.</li>
+            </ul>
+        </li>
+
+        <li>There are mainly two types of web services:
+            <ul>
+                <li>a) SOAP-based Web Services</li>
+                <li>b) RESTful Web Services</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>a) SOAP-based Web Services:</h3>
+    <ul>
+        <li>SOAP stands for Simple Object Access Protocol.</li>
+        <li>SOAP is a protocol to send data between client and server by using XML.</li>
+        <li>SOAP is complex, slow and has high overhead.</li>
+    </ul>
+
+    <h3>b) RESTful Web Services:</h3>
+    <ul>
+        <li>It is not a protocol, and REST is a way to build web services.</li>
+        <li>RESTful Web Services are simple, fast and have less overhead.</li>
+        <li>It uses HTTP Methods like:</li>
+        <ul>
+            <li>GET → Retrieves all users.</li>
+            <li>POST → Creates a new user.</li>
+            <li>PUT → Updates a user.</li>
+            <li>DELETE → Deletes a user.</li>
+        </ul>
+    </ul>
+
+    <h3>Steps to create RESTful Services:</h3>
+    <ul>
+        <li>i) Create a Spring Boot project</li>
+        <li>ii) Create a REST Controller:</li>
+    </ul>
+    <pre  style="margin-left:2rem;">
+@RestController
+@RequestMapping("/a")
+public class A {
+    ...
+}
+    </pre>
+    <ul>
+        <li>iii) Run the application</li>
+        <li>iv) Access the API</li>
+    </ul>
+</div>
 
 
 </body>
 </html>
+
