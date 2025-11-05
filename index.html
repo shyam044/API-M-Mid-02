@@ -581,10 +581,66 @@ String b = a.get()
     </pre>
     </ul>
 </div>
+<header>
+    API&M Mid-02
+</header>
+<div class="container">
+    <h2>7) Securing Spring REST Endpoints</h2>
 
+    <ul>
+        <li>Securing Spring REST endpoints is an essential part of building secure web applications.</li>
+        <li>It ensures that only authorized users can access the Application and protects the data from attackers.</li>
+    </ul>
+
+    <h3>i) Integration:</h3>
+    <ul>
+        <li>Spring Security provides built-in mechanisms for authentication and authorization.</li>
+         <p><strong>Authentication:</strong></p>
+    <p>The process of verifying the identity of a user or device is called as Authentication.</p>
+    
+        <li>It protects from the common attacks like Injection, session hijacking etc.</li>
+        <li><strong>@EnableWebSecurity</strong> annotation is used to provide configuration.</li>
+
+    </ul>
+
+
+    <p><strong>Example:</strong></p>
+    <pre>
+@EnableWebSecurity
+public class A 
+{
+    @Bean
+    ...
+}
+    </pre>
+
+    <h3>ii) Custom Security Policies:</h3>
+    <ul>
+        <li>If built-in policies aren’t enough for your Application, you can create custom security policies to handle your specific needs.</li>
+        <li><strong>@PreAuthorize</strong> annotation is used to define access rules.</li>
+    </ul>
+
+    <p><strong>Example:</strong></p>
+    <pre>
+@RestController
+public class A
+{
+    @PreAuthorize(...)
+    ...
+}
+    </pre>
+
+    <h3>iii) Security:</h3>
+    <ul>
+        <li>Instead of using HTTP, use HTTPS for extra security.</li>
+        <li>JWT or OAuth2 are used for token-based Authentication.</li>
+        <li><strong>JWT</strong> stands for JSON Web Token.</li>
+    </ul>
+</div>
 
 </body>
 </html>
+
 
 
 
